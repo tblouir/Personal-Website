@@ -1,7 +1,8 @@
 :root {
   --base-color: #1f1f24;
   --fade-animation: 2s ease fadeIn;
-  --rails-svg-width: 10rem;
+  --rails-svg-width: 40%;
+  --svg-width: 25%;
   --line-animation-delay: 0.5s;
 }
 
@@ -113,33 +114,60 @@ a:hover {
   display: flex;
   gap: 2rem;
   margin-top: 10rem;
+  margin-left: 16rem;
+  margin-right: 16rem;
   animation: var(--fade-animation);
   animation-delay: 0.75s;
   animation-iteration-count: 1;
   animation-fill-mode: backwards;
 }
 
+.experience .images {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .experience {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: calc(100%/3);
+}
+
+.experience a {
+  padding: 0;
+}
+
+.experience a:hover {
+  background-color: inherit;
 }
 
 .svg-image {
-  width: 6rem;
+  width: var(--svg-width);
+  min-width: 4rem;
   padding: 1rem;
 }
 
 .rails-svg {
-  width: var(--rails-svg-width)
+  width: var(--rails-svg-width);
+  min-width: 8rem;
 }
 
 .react-svg {
-  height: var(--rails-svg-width)
+  min-height: var(--rails-svg-width);
 }
 
 .ruby-svg {
-  translate: 0 0.75rem;
+  translate: 0 0.70rem;
+}
+
+.knight-svg {
+  max-width: 5rem;
+  /* width: 5rem; */
+  background-color: gray;
+  border-radius:10%;
 }
 
 .header {
