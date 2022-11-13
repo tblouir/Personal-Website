@@ -1,0 +1,233 @@
+:root {
+  --base-color: #1f1f24;
+  --fade-animation: 2s ease fadeIn;
+  --rails-svg-width: 10rem;
+  --line-animation-delay: 0.5s;
+}
+
+html {
+  font-family: raleway, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: var(--base-color);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 0.75rem;
+  color: white;
+}
+
+a:hover {
+  color:black;
+  background-color: gray;
+}
+
+.header-link {
+  font-size: 1.5rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main div {
+  font-size: 1.5rem;
+}
+
+.main-top-container {
+  text-align: center;
+}
+
+.main-1 {
+  margin-top: 5rem;
+  animation: var(--fade-animation);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.top-1 {
+  animation: var(--fade-animation);
+  animation-delay: 0.25s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+.top-2 {
+  animation: var(--fade-animation);
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+100% {
+    opacity: 1;
+ }
+}
+
+@keyframes flyInTop {
+  0% {
+    translate: 0 -100vh;
+  }
+  100% {
+    translate: 0;
+  }
+}
+
+@keyframes flyInRight {
+  0% {
+    translate: 100vw;
+  }
+  100% {
+    translate: 0;
+  }
+}
+
+@keyframes flyInLeft {
+  0% {
+    translate: -100vw;
+  }
+  100% {
+    translate: 0;
+  }
+}
+
+.experience-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 10rem;
+  animation: var(--fade-animation);
+  animation-delay: 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.svg-image {
+  width: 6rem;
+  padding: 1rem;
+}
+
+.rails-svg {
+  width: var(--rails-svg-width)
+}
+
+.react-svg {
+  height: var(--rails-svg-width)
+}
+
+.ruby-svg {
+  translate: 0 0.75rem;
+}
+
+.header {
+  background-color: black;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer {
+  background-color: black;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container .contact-body {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: var(--fade-animation);
+}
+
+.contact-body a {
+  font-size: 2rem;
+}
+
+.gmail-logo {
+  width: 8rem;
+}
+
+.contact-email, .contact-github {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-email {
+  margin-bottom: 5rem;
+}
+
+.about-body {
+  height: 70vh;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-line {
+  margin: 1rem;
+}
+
+.about-body-top {
+  animation: var(--line-animation-delay) ease flyInTop
+}
+
+.about-line-container .line-1 {
+  animation: var(--line-animation-delay) ease flyInLeft;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.about-line-container .line-2 {
+  animation: var(--line-animation-delay) ease flyInRight;
+  animation-delay: 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.about-line-container .line-3 {
+  animation: var(--line-animation-delay) ease flyInLeft;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+.about-line-container .line-4 {
+  animation: var(--line-animation-delay) ease flyInRight;
+  animation-delay: 1.25s;
+  animation-fill-mode: backwards;
+}
